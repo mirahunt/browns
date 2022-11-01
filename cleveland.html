@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<style>
+		.content {
+			max-width: 500px;
+			margin: auto;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="content">
+		<h1 class="guards">Did Cleveland Win?</h1>
+	</div>
+	
+	<div class="btn-group" style="width:100%">
+		<button style="width:25%">About</button>
+		<button style="width:25%">News</button>
+		<button style="width:25%">Scores</button>
+		<form action="/action_page.php">
+			<input type="text" placeholder="Search.." name="search">
+			<button type="submit">Submit</button>
+		  </form>
+	</div>
+
+
+
+	<div class="container2">
+		<form id="search_mini_form" action="" method="get"
+			class="wrap" onsubmit="return validateCenterSearch()">
+			<div class="search-container">
+				<input type="date" class="searchTerm" placeholder="Search Dates..." id="centersearch" name="q"
+					maxlength="128" value="" autocomplete="off" spellcheck="true"
+					title="Search by Keyword or Product Code">
+				<button type="submit" class="centersearchButton" title="Search"><i class="fa fa-search fa-fw"></i>
+					<div class="loader"></div>
+				</button>
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>
