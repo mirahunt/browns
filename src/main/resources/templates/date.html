@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Did Cleveland Win?</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.content {
+			max-width: 500px;
+			margin: auto;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="content">
+		<h1 class="guards">Did Cleveland Win?</h1>
+	</div>
+	
+	<div class="btn-group" style="width:100%">
+		<button style="width:25%">About</button>
+		<button style="width:25%">News</button>
+		<button style="width:25%">Scores</button>
+		<form action="/action_page.php">
+			<input type="text" placeholder="Search.." name="search">
+			<button type="submit">Submit</button>
+		  </form>
+	</div>
+
+	<div class="container2">
+		<form id="search_mini_form" action="#" th:action="@{/date}" th:object="${date}" method="post" class="wrap">
+			<div class="search-container">
+				<input type="date" class="searchTerm" placeholder="Search Dates..." id="centersearch" name="q"
+					maxlength="128" value="" autocomplete="off" spellcheck="true"
+					title="Search by Keyword or Product Code" th:field="*{id}" >
+				<button type="submit" class="centersearchButton" title="Search"><i class="fa fa-search fa-fw"></i>
+					<div class="loader"></div>
+				</button>
+			</div>
+		</form>
+	</div>
+
+    <p th:text="'date: ' + ${date.id}" />
+	<table>
+		<caption style="float:left">Monthly savings</caption>
+        <tr>
+            <th>A</th>
+            <th>1</th>
+            <th>1,00,000</th>
+        </tr>
+
+        <tr>
+            <td>B</td>
+            <td>2</td>
+            <td>1,00,000</td>
+        </tr>
+
+        <tr>
+            <td>C</td>
+            <td>3</td>
+            <td>50,000</td>
+        </tr>
+
+        <tr>
+            <td>D</td>
+            <td>4</td>
+            <td>65,000</td>
+        </tr>
+    </table>
+	<!--import-->
+		<script src="script.js"></script>
+</body>
+
+</html>
+
+<button onclick="alertMe()">Alert</button>
