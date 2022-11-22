@@ -35,7 +35,7 @@
 			<div class="search-container">
 				<input type="date" class="searchTerm" placeholder="Search Dates..." id="centersearch" name="q"
 					maxlength="128" value="" autocomplete="off" spellcheck="true"
-					title="Search by Keyword or Product Code" th:field="*{id}" >
+					title="Search by Keyword or Product Code" th:field="*{ymd}" >
 				<button type="submit" class="centersearchButton" title="Search"><i class="fa fa-search fa-fw"></i>
 					<div class="loader"></div>
 				</button>
@@ -43,7 +43,7 @@
 		</form>
 	</div>
 
-    <p th:text="'date: ' + ${date.id}" />
+    <p th:text="'date: ' + ${date.ymd}" />
 	<table>
 		<caption style="float:left">Monthly savings</caption>
         <tr>

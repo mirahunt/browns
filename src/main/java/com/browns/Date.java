@@ -2,23 +2,14 @@ package com.browns;
 
 public class Date {
 
-  private String id;
-  private String content;
+  private String ymd;
 
-  public String getId() {
-    return id;
+  public String getYmd() {
+    return ymd;
   }
 
-  public void setId(String id) {
-    this.id = id;
-  }
-
-  public String getContent() {
-    return content;
-  }
-
-  public void setContent(String content) {
-    this.content = content;
+  public void setYmd(String ymd) {
+    this.ymd = ymd;
   }
 
 }

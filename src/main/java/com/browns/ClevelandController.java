@@ -7,18 +7,18 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class DateController {
+public class ClevelandController {
 
   @GetMapping("/date")
   public String dateForm(Model model) {
     model.addAttribute("date", new Date());
-    return "date";
+    return "cleveland";
   }
 
   @PostMapping("/date")
   public String dateSubmit(@ModelAttribute Date date, Model model) {
     model.addAttribute("date", date);
-    return "date";
+    return "cleveland";
   }
 
 }
